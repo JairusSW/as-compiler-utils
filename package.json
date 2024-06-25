@@ -1,0 +1,42 @@
+{
+  "name": "as-plugin",
+  "version": "0.0.0",
+  "description": "Plugin framework for AssemblyScript through transforms",
+  "types": "assembly/index.ts",
+  "author": "Jairus Tanaka",
+  "contributors": [],
+  "license": "MIT",
+  "scripts": {
+    "test": "wasmtime build/test.spec.wasm",
+    "pretest": "asc assembly/__tests__/test.spec.ts --target test",
+    "build": "tsc",
+    "prettier": "prettier -w ."
+  },
+  "devDependencies": {
+    "@assemblyscript/wasi-shim": "^0.1.0",
+    "as-plugin": "./",
+    "assemblyscript": "^0.27.28",
+    "prettier": "^3.3.2"
+  },
+  "dependencies": {},
+  "overrides": {
+    "assemblyscript": "$assemblyscript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairusSW/as-plugin.git"
+  },
+  "keywords": [
+    "assemblyscript",
+    "plugin",
+    "transform"
+  ],
+  "bugs": {
+    "url": "https://github.com/JairusSW/as-plugin/issues"
+  },
+  "homepage": "https://github.com/JairusSW/as-plugin#readme",
+  "type": "module",
+  "publishConfig": {
+    "@JairusSW:registry": "https://npm.pkg.github.com"
+  }
+}
